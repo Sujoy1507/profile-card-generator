@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #C6D870;
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Form Styling */
+input[type="text"] {
+    display: block;
+    background-color: #daecd5;
+    height: 35px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+    border: none;
+    padding: 0 15px;
+    width: 100%;
+    font-size: 14px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    background-color: #c8e4c1;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#submit {
+    width: 120px;
+    height: 40px;
+    background-color: #5D688A;
+    transition: all ease 0.2s;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px auto;
+    display: block;
+}
+
+#submit:hover {
+    background-color: #1544d2;
+    transform: scale(1.05);
+}
+
+#main-form {
+    background-color: #699;
+    width: 300px;
+    border-radius: 15px;
+    padding: 30px;
+    height: fit-content;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* File upload styling */
+#file-upload-area {
+    margin-bottom: 20px;
+}
+
+#inp {
+    color: #0105ff;
+    font-size: 16px;
+    width: 100%;
+    padding: 15px;
+    height: 60px;
+    background-color: #F5D2D2;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid maroon;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.2s;
+    font-weight: bold;
+}
+
+#inp:hover {
+    background-color: #f0c5c5;
+    transform: scale(1.02);
+}
+
+/* Cards Container */
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex: 1;
+}
+
+/* Card Styling */
+.card {
+    background-color: #FFF0CE;
+    min-width: 280px;
+    max-width: 350px;
+    width: 300px;
+    min-height: 350px;
+    max-height: fit-content;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+    animation: slideIn 0.5s ease-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.profile {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    border-radius: 50%;
+    overflow: hidden;
+    align-self: center;
+    border: 4px solid #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #d63384;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.card h5 {
+    font-size: 1.2rem;
+    color: #5D688A;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #444;
+    text-align: center;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* Delete button for cards */
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all ease 0.2s;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #main {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #main-form {
+        width: 90%;
+        max-width: 400px;
+    }
+    
+    #cards-container {
+        justify-content: center;
+    }
+}

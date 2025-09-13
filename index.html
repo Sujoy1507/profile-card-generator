@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="main-form">
+            <form action="">
+                <div id="file-upload-area">
+                    <input type="file" id="fileInput" accept="image/*">
+                    <div id="inp">Upload Profile Picture</div>
+                </div>
+                <input type="text" placeholder="Name" required>
+                <input type="text" placeholder="Occupation" required>
+                <input type="text" placeholder="About You" required>
+                <input id="submit" type="submit" value="Create Card">
+            </form>
+        </div>
+        
+        <!-- Cards will be added here dynamically -->
+        <div id="cards-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
